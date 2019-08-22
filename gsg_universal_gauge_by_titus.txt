@@ -438,32 +438,6 @@ holoAng(Index,E:toWorld(ang((DefAngle)+(SmoothedBaby / Range),90,90)))
 elseif(Dir){
 holoAng(Index,E:toWorld(ang((DefAngle)-(SmoothedBaby / Range),90,90)))
 }
-}
-
-
-function gsgGauge2(Index,Range,ID:string,MinRange,MaxRange,Input,ABS_It_Yo,SuperComplexSmoothingThing,DefAngle){ #function aaaaaaaa
-
-local FatOutput = ABS_It_Yo ? abs(Input) : Input
-local TreatedOutput = FatOutput-PSIOffset
-local LocalRange = inrange(TreatedOutput,MinRange,MaxRange)
-
-# "Freeze-Put" (freezes the input, kinda)
-if(LocalRange == 0 & TreatedOutput>MaxRange){
-TreatedOutput = MaxRange 
-}
-if(LocalRange == 0 & TreatedOutput<MinRange){
-TreatedOutput = MinRange 
-}
-
-#lube it up baby
-SmoothedBaby2 = SmoothedBaby2+(TreatedOutput-SmoothedBaby2) / max(SuperComplexSmoothingThing,0)  
-#haha output it, or ill
-if(!Dir){
-holoAng(Index,E:toWorld(ang((DefAngle)+(SmoothedBaby2 / Range),90,90)))
-}
-elseif(Dir){
-holoAng(Index,E:toWorld(ang((DefAngle)-(SmoothedBaby2 / Range),90,90)))
-}
 }#end of function madness that really isn't needed
 
 
@@ -472,7 +446,7 @@ holoAng(Index,E:toWorld(ang((DefAngle)-(SmoothedBaby2 / Range),90,90)))
 interval(100)   
 gsgGauge(1,Range,"gsg-universal-gauge",MinLoad,MaxLoad,Input1,Abs,3,Offset)
 if(Dual){
-gsgGauge2(2,Range,"gsg-universal-gauge2",MinLoad,MaxLoad,Input2,Abs,3,Offset)
+gsgGauge(2,Range,"gsg-universal-gauge2",MinLoad,MaxLoad,Input2,Abs,3,Offset)
 }
 
 
