@@ -23,3 +23,26 @@ This will be updated now and then adding more gauges as I make them.
 <br>
 <br>
 Copyright © 2019 Titus Studios Media, https://titusstudiosmediagroup.github.io
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+pending approval from [gr0ve](https://i.imgur.com/uATwHA1.png)
