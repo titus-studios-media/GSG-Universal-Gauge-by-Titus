@@ -6,6 +6,7 @@
 
 Made this in a few hours, pretty easy to install.
 
+<br>
 
 `Input1` is for the No.1 Needle
 
@@ -14,6 +15,8 @@ Made this in a few hours, pretty easy to install.
 Now you dont need heaps of different E2s!
 This will be updated now and then adding more gauges as I make them.
 
+<br>
+<br>
 
 ### Credits
  * E2 Dev: Titus Studios (haiiiiiii)
@@ -21,7 +24,6 @@ This will be updated now and then adding more gauges as I make them.
  * Special thanks to Grove for hosting the textures on his train parts pack.
  
  
-<br>
 <br>
 <br>
 <br>
