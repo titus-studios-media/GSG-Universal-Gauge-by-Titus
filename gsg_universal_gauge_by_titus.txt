@@ -1,0 +1,481 @@
+@name GSG Universal Gauge by Titus
+@inputs Input1 Input2
+@outputs
+@persist SmoothedBaby SmoothedBaby2 [SubMat NeedleFinal NeedleFinal2]:string [MaxLoad MinLoad Range Offset Abs NeedleType NeedleScale OffSN1 OffSN2 OffSN3 OffSN1b OffSN2b OffSN3b Dir Dual PSIOffset]:number
+@model models/gsgtrainprops/parts/cab/gauge_01.mdl
+@trigger none 
+
+E = entity()
+E:setAlpha(0)
+    
+if(dupefinished() | duped()){reset()} 
+if(first()){ 
+    
+    local Scale = 1 # Scale of the Gauge
+    local Brand = 5 # EMD, GE, ALCO, Lima-Hamilton, Fairbanks-Morse, Hickok, Air Gauges & AFM/CFM Air Gauges
+    local Skin = 0 # Select what "Type" of gauge from the Brand List, ie; skin slection.
+
+
+    #Expression 2 made by Titus, https://titusstudiosmediagroup.github.io/
+    #Gauge Local Version: 1.07
+    
+switch(Brand){  
+    case 0, #EMD
+    switch(Skin){
+    case 0,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_d800_v1"
+        MaxLoad = 1500
+        MinLoad = -800
+        Range = 8.9
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 1,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_d800_v2"
+        MaxLoad = 1500
+        MinLoad = -800
+        Range = 8.9
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 2,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_d800_v3"
+        MaxLoad = 1500
+        MinLoad = -800
+        Range = 8.8
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 3,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_v1"
+        MaxLoad = 1500
+        MinLoad = 0
+        Range = 8.9
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 4,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_v2"
+        MaxLoad = 1500
+        MinLoad = 0
+        Range = 8.9
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 5,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1650_d945_v1"
+        MaxLoad = 1650
+        MinLoad = -1000
+        Range = 11.2
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 6,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1650_d945_v2"
+        MaxLoad = 1650
+        MinLoad = -1000
+        Range = 11.2
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    case 7,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1650_v2"
+        MaxLoad = 1650
+        MinLoad = 0
+        Range = 11.2
+        Offset = 90
+        Abs = 0
+        NeedleType = 0
+        break
+    }
+    break
+    case 1, #GE
+    break
+    case 2, #ALCO
+    break
+    case 3, #Lima-Hamilton
+    switch(Skin){
+    case 0,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_lima_a2000_v1"
+        MaxLoad = 2000
+        MinLoad = -2000
+        Range = 14.1
+        Offset = 82
+        Abs = 1
+        NeedleType = 2
+        break
+    case 1,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_lima_a2000_v2"
+        MaxLoad = 2000
+        MinLoad = -2000
+        Range = 14.1
+        Offset = 82
+        Abs = 1
+        NeedleType = 2
+        break
+    case 2,
+        SubMat = "models/gsgtrainprops/cab/gauge_battery_generic_1"
+        MaxLoad = 100
+        MinLoad = -100
+        Range = 1.45
+        Offset = 153
+        Abs = 0
+        NeedleType = 2
+        break
+    }
+    break
+    case 4, #Fairbanks-Morse
+    break
+    case 5, #Hickok
+    switch(Skin){
+    case 0,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_arc_v1"
+        MaxLoad = 1500
+        MinLoad = -1500
+        Range = 21
+        Offset = 84.5
+        Abs = 1
+        NeedleType = 1
+        Dir = 1
+        break
+    case 1,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_arc_v2"
+        MaxLoad = 1500
+        MinLoad = -1500
+        Range = 21
+        Offset = 84.5
+        Abs = 1
+        NeedleType = 1
+        Dir = 1
+        break
+    case 2,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a750_arc_v1"
+        MaxLoad = 750
+        MinLoad = -750
+        Range = 10.5
+        Offset = 84.5
+        Abs = 1
+        NeedleType = 1
+        Dir = 1
+        break
+    case 3,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_arc_v3"
+        MaxLoad = 1500
+        MinLoad = -1500
+        Range = 21
+        Offset = 194
+        Abs = 1
+        NeedleType = 3
+        Dir = 0
+        break
+    case 4,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_arc_v4"
+        MaxLoad = 1500
+        MinLoad = -1500
+        Range = 21
+        Offset = 194
+        Abs = 1
+        NeedleType = 3
+        Dir = 0
+        break
+    case 5,
+        SubMat = "models/gsgtrainprops/cab/gauge_amp_emd_a1500_arc_v5"
+        MaxLoad = 1500
+        MinLoad = -1500
+        Range = 21
+        Offset = 194
+        Abs = 1
+        NeedleType = 3
+        Dir = 0
+        break
+        }
+        break
+    case 6, #Air Gauges
+    switch(Skin){
+    case 0,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_salem_160_black"
+        MaxLoad = 160
+        Range = 0.598
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 1,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_salem_160_green"
+        MaxLoad = 160
+        Range = 0.598
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 2,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_salem_80_black"
+        MaxLoad = 80
+        Range = 0.299
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        break
+    case 3,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_kpa_black"
+        MaxLoad = 160
+        Range = 0.598
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 4,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_pitanco_160_1_black"
+        MaxLoad = 160
+        Range = 0.598
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 5,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_pitanco_160_2_black"
+        MaxLoad = 160
+        MinLoad = 0
+        Range = 0.598
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        PSIOffset = 0
+        break
+    case 6,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_grahamwhite_cfm_black"
+        MaxLoad = 100
+        Range = 0.78
+        Offset = 162
+        Abs = 1
+        NeedleType = 4
+        break
+    case 7,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_grahamwhite_cfm_green"
+        MaxLoad = 100
+        Range = 0.78
+        Offset = 162
+        Abs = 1
+        NeedleType = 4
+        break
+    case 8,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_afm_kpa_black"
+        MaxLoad = 100
+        MinLoad = -100
+        Range = 0.885
+        Offset = 0
+        Abs = 0
+        NeedleType = 4
+        break
+    case 9,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_westinghouse_200_1_black"
+        MaxLoad = 200
+        Range = 0.748
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 10,
+        SubMat = "models/gsgtrainprops/cab/gauge_air_westinghouse_200_2_black"
+        MaxLoad = 200
+        Range = 0.748
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 11,
+        SubMat = "models/gsgtrainprops/cab/gauge_lima_intake_manifold"
+        MaxLoad = 30
+        Range = 0.112
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 12,
+        SubMat = "models/gsgtrainprops/cab/gauge_lima_lube_oil"
+        MaxLoad = 100
+        Range = 0.374
+        Offset = 81
+        Abs = 0
+        NeedleType = 4
+        Dual = 1
+        break
+    case 13,
+        SubMat = "models/gsgtrainprops/cab/gauge_lima_cooling_water"
+        MaxLoad = 240
+        Range = 0.9
+        Offset = 81
+        Abs = 0
+        NeedleType = 5
+        break
+    }
+        break
+}
+
+
+switch(NeedleType){
+case 0,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_load_emd_new_white"
+    NeedleFinal2 = "models/proppertextures/invisible"
+    NeedleScale = 2
+    OffSN1 = 0
+    OffSN2 = 0
+    OffSN3 = 0
+    break
+case 1,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_load_hickok_white"
+    NeedleFinal2 = "models/proppertextures/invisible"
+    NeedleScale = 2
+    OffSN1 = 0
+    OffSN2 = 0
+    OffSN3 = 1.7
+    break
+case 2,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_load_emd_old_black"
+    NeedleFinal2 = "models/proppertextures/invisible"
+    NeedleScale = 1.3
+    OffSN1 = 0
+    OffSN2 = 0
+    OffSN3 = 0
+    break
+case 3,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_load_hickok_white"
+    NeedleFinal2 = "models/proppertextures/invisible"
+    NeedleScale = 2
+    OffSN1 = 0
+    OffSN2 = 0
+    OffSN3 = -1.7
+    break
+case 4,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_air_white"
+    NeedleFinal2 = "models/gsgtrainprops/cab/needle_air_red"
+    NeedleScale = 2
+    OffSN1 = 0.07
+    OffSN2 = 0
+    OffSN3 = 0
+    OffSN1b = 0
+    OffSN2b = 0
+    OffSN3b = 0
+    break
+case 5,
+    NeedleFinal = "models/gsgtrainprops/cab/needle_air_black"
+    NeedleFinal2 = "models/proppertextures/invisible"
+    NeedleScale = 2
+    OffSN1 = 0.07
+    OffSN2 = 0
+    OffSN3 = 0
+    break
+}
+
+
+    A = 1
+    holoCreate(A)
+    holoParent(A,entity())
+    holoColor(A,vec(255))
+    holoMaterial(A,NeedleFinal)
+    holoScale(A,NeedleScale*vec(0.2))
+    holoModel(A, "plane")
+    holoPos(A,entity():toWorld(vec(OffSN1,OffSN2,OffSN3)))
+    holoAng(A,entity():toWorld(ang(90,0,0)))
+    
+    A = 2
+    holoCreate(A)
+    holoParent(A,entity())
+    holoColor(A,vec(255))
+    holoMaterial(A,NeedleFinal2)
+    holoScale(A,NeedleScale*vec(0.2))
+    holoModel(A, "plane")
+    holoPos(A,entity():toWorld(vec(OffSN1b,OffSN2b,OffSN3b)))
+    holoAng(A,entity():toWorld(ang(90,0,0)))
+            
+    A = 3
+    holoCreate(A)
+    holoParent(A,entity())
+    holoColor(A,vec(255))
+    holoScale(A,vec(Scale))
+    holoModel(A, "models/gsgtrainprops/parts/cab/gauge_01.mdl")
+    holoPos(A,entity():toWorld(vec(0,0,0)))
+    holoAng(A,entity():toWorld(ang(0,0,0)))
+    holoEntity(A):setSubMaterial(1,SubMat)
+
+
+
+function gsgGauge(Index,Range,ID:string,MinRange,MaxRange,Input,ABS_It_Yo,SuperComplexSmoothingThing,DefAngle){ #function aaaaaaaa
+
+local FatOutput = ABS_It_Yo ? abs(Input) : Input
+local TreatedOutput = FatOutput-PSIOffset
+local LocalRange = inrange(TreatedOutput,MinRange,MaxRange)
+
+# "Freeze-Put" (freezes the input, kinda)
+if(LocalRange == 0 & TreatedOutput>MaxRange){
+TreatedOutput = MaxRange 
+}
+if(LocalRange == 0 & TreatedOutput<MinRange){
+TreatedOutput = MinRange 
+}
+
+#lube it up baby
+SmoothedBaby = SmoothedBaby+(TreatedOutput-SmoothedBaby) / max(SuperComplexSmoothingThing,0)  
+#haha output it, or ill
+if(!Dir){
+holoAng(Index,E:toWorld(ang((DefAngle)+(SmoothedBaby / Range),90,90)))
+}
+elseif(Dir){
+holoAng(Index,E:toWorld(ang((DefAngle)-(SmoothedBaby / Range),90,90)))
+}
+}
+
+
+function gsgGauge2(Index,Range,ID:string,MinRange,MaxRange,Input,ABS_It_Yo,SuperComplexSmoothingThing,DefAngle){ #function aaaaaaaa
+
+local FatOutput = ABS_It_Yo ? abs(Input) : Input
+local TreatedOutput = FatOutput-PSIOffset
+local LocalRange = inrange(TreatedOutput,MinRange,MaxRange)
+
+# "Freeze-Put" (freezes the input, kinda)
+if(LocalRange == 0 & TreatedOutput>MaxRange){
+TreatedOutput = MaxRange 
+}
+if(LocalRange == 0 & TreatedOutput<MinRange){
+TreatedOutput = MinRange 
+}
+
+#lube it up baby
+SmoothedBaby2 = SmoothedBaby2+(TreatedOutput-SmoothedBaby2) / max(SuperComplexSmoothingThing,0)  
+#haha output it, or ill
+if(!Dir){
+holoAng(Index,E:toWorld(ang((DefAngle)+(SmoothedBaby2 / Range),90,90)))
+}
+elseif(Dir){
+holoAng(Index,E:toWorld(ang((DefAngle)-(SmoothedBaby2 / Range),90,90)))
+}
+}#end of function madness that really isn't needed
+
+
+}
+
+interval(100)   
+gsgGauge(1,Range,"gsg-universal-gauge",MinLoad,MaxLoad,Input1,Abs,3,Offset)
+if(Dual){
+gsgGauge2(2,Range,"gsg-universal-gauge2",MinLoad,MaxLoad,Input2,Abs,3,Offset)
+}
+
+
+
+
+# hi, im titus
