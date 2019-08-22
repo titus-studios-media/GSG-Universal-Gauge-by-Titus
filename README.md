@@ -1,7 +1,7 @@
 # GSG Universal Gauge by Titus
 
 ![Build-Status](https://img.shields.io/badge/build-passed-brightgreen.svg)
-![Manifest-Version](https://img.shields.io/github/last-commit/titus-studios-media/Wilma-Head-of-Train-Device.svg)
+![Manifest-Version](https://img.shields.io/github/last-commit/titus-studios-media/GSG-Universal-Gauge-by-Titus.svg)
 ![Repo-Size](https://img.shields.io/github/repo-size/titus-studios-media/Wilma-Head-of-Train-Device.svg)
 
 Made this in a few hours, pretty easy to install.
