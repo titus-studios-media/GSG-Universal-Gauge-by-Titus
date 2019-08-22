@@ -388,20 +388,22 @@ case 5,
     holoParent(A,entity())
     holoColor(A,vec(255))
     holoMaterial(A,NeedleFinal)
-    holoScale(A,NeedleScale*vec(0.2))
+    holoScale(A,(NeedleScale*vec(0.2))*vec(Scale))
     holoModel(A, "plane")
     holoPos(A,entity():toWorld(vec(OffSN1,OffSN2,OffSN3)))
     holoAng(A,entity():toWorld(ang(90,0,0)))
     
+    if(Dual){
     A = 2
     holoCreate(A)
     holoParent(A,entity())
     holoColor(A,vec(255))
     holoMaterial(A,NeedleFinal2)
-    holoScale(A,NeedleScale*vec(0.2))
+    holoScale(A,(NeedleScale*vec(0.2))*vec(Scale))
     holoModel(A, "plane")
     holoPos(A,entity():toWorld(vec(OffSN1b,OffSN2b,OffSN3b)))
     holoAng(A,entity():toWorld(ang(90,0,0)))
+    }
             
     A = 3
     holoCreate(A)
