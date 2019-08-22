@@ -12,7 +12,7 @@ if(dupefinished() | duped()){reset()}
 if(first()){ 
     
     local Scale = 1 # Scale of the Gauge
-    local Brand = 5 # EMD, GE, ALCO, Lima-Hamilton, Fairbanks-Morse, Hickok, Air Gauges & AFM/CFM Air Gauges
+    local Brand = 0 # EMD, GE, ALCO, Lima-Hamilton, Fairbanks-Morse, Hickok, Air Gauges & AFM/CFM Air Gauges
     local Skin = 0 # Select what "Type" of gauge from the Brand List, ie; skin slection.
 
 
