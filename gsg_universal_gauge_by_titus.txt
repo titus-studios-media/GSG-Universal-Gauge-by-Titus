@@ -17,7 +17,7 @@ if(first()){
 
 
     #Expression 2 made by Titus, https://titusstudiosmediagroup.github.io/
-    #Gauge Local Version: 1.08
+    #Gauge Local Version: 1.12
     
 switch(Brand){  
     case 0, #EMD
