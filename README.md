@@ -14,18 +14,12 @@ Made this in a few hours, pretty easy to install.
 
 Now you dont need heaps of different E2s!
 This will be updated now and then adding more gauges as I make them.
-
 <br>
-<br>
-
 ### Credits
  * E2 Dev: Titus Studios (haiiiiiii)
  * Textures: Also Titus
  * Special thanks to Grove for hosting the textures on his train parts pack.
  
- 
 <br>
 <br>
-<br>
- 
 Copyright © 2019 Titus Studios Media, https://titusstudiosmediagroup.github.io
