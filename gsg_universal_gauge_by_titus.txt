@@ -304,7 +304,7 @@ switch(Brand){
         Offset = 81
         Abs = 0
         NeedleType = 4
-        Dual = 1
+        Dual = 0
         break
     case 12,
         SubMat = "models/gsgtrainprops/cab/gauge_lima_lube_oil"
@@ -313,7 +313,7 @@ switch(Brand){
         Offset = 81
         Abs = 0
         NeedleType = 4
-        Dual = 1
+        Dual = 0
         break
     case 13,
         SubMat = "models/gsgtrainprops/cab/gauge_lima_cooling_water"
