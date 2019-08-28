@@ -14,6 +14,8 @@ Made this in a few hours, pretty easy to install.
 
 Now you dont need heaps of different E2s!
 This will be updated now and then adding more gauges as I make them.
+
+**NOTE:** Report bugs via the Issues panel on this repo. Thank You.
 <br>
 ### Credits
  * E2 Dev: Titus Studios (haiiiiiii)
